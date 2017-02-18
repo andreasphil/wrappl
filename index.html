@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wrappl</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- Webapp mode configuration -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon"
+    sizes="57x57"
+    href="https://toggl.com/images/share-img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon"
+    sizes="114x114"
+    href="https://toggl.com/images/share-img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon"
+    sizes="72x72"
+    href="https://toggl.com/images/share-img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon"
+    sizes="144x144"
+    href="https://toggl.com/images/share-img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon"
+    sizes="60x60"
+    href="https://toggl.com/images/share-img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon"
+    sizes="120x120"
+    href="https://toggl.com/images/share-img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon"
+    sizes="76x76"
+    href="https://toggl.com/images/share-img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon"
+    sizes="152x152"
+    href="https://toggl.com/images/share-img/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon"
+    sizes="180x180"
+    href="https://toggl.com/images/share-img/apple-touch-icon-180x180.png">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    type="image/png"
+    href="https://toggl.com/images/share-img/favicon-192x192.png"
+    sizes="192x192">
+  <link rel="icon"
+    type="image/png"
+    href="https://toggl.com/images/share-img/favicon-160x160.png"
+    sizes="160x160">
+  <link rel="icon"
+    type="image/png"
+    href="https://toggl.com/images/share-img/favicon-96x96.png"
+    sizes="96x96">
+  <link rel="icon"
+    type="image/png"
+    href="https://toggl.com/images/share-img/favicon-16x16.png"
+    sizes="16x16">
+  <link rel="icon"
+    type="image/png"
+    href="https://toggl.com/images/share-img/favicon-32x32.png"
+    sizes="32x32">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400"
+    rel="stylesheet"
+    type="text/css">
+
+  <!-- Styles -->
+  <style>
+    body
+    {
+      background-color: #26282B;
+      color: #FFFFFF;
+      font-family: 'Open Sans', sans-serif;
+      padding: 100px;
+      text-align: center;
+    }
+
+    main
+    {
+      margin: auto;
+      max-width: 500px;
+    }
+
+    h1
+    {
+      font-family: 'Arial Rounded MT Bold', 'Open Sans', sans-serif;
+      margin: 0 0 30px 0;
+    }
+
+    p
+    {
+      color: #A5A6A7;
+      line-height: 1.5;
+      margin: 0 0 30px 0;
+    }
+
+    .button
+    {
+      background-color: #DE202B;
+      border-radius: 2px;
+      color: #FFFFFF;
+      display: inline-block;
+      margin: 20px 0 0 0;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Wrappl</h1>
+    <p>It's a wrap! This page lets you add the popular time tracking tool Toggl to your iPad's
+      home screen and launches it in full screen mode without the Safari chrome.</p>
+    <p>To get started, head over to the share menu in Safari on your device, select <i>Add to
+      Home Screen</i> and you're ready to go.</p>
+    <a href="#"
+      onclick="redirect()"
+      class="button">
+      Bring me to Toggl!
+    </a>
+  </main>
+
+  <script>
+    function redirect()
+    {
+      window.location.href = 'https://www.toggl.com/app/timer';
+    }
+
+    (function()
+    {
+      // Try to guess whether we're in standalone mode. If so, navigate to Toggl automatically.
+      if (window.navigator.standalone === true)
+      {
+        redirect();
+      }
+    })();
+  </script>
+</body>
+</html>
